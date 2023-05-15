@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+}
+
+header {
+    background-color: #0B53DE;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    width: 20px;
+    height: 4px;
+    background: #000000;
+    margin: 4px;
+}
+
+.menu-lanche {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*codigo importante*/
+    grid-gap: 50px;
+    width: 95%;
+    margin: auto;
+}
+
+.texto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 100%;
+    border: #000000 2px solid;
+    background-color: #ffffff;
+}
+
+.texto p{
+    color: #000000;
+}
+
+img {
+    width: 100%;
+    border: #000000 solid 2px;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+p {
+    text-align: center;
+}
+
+footer{
+    background-color: #0B53DE;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    margin: 5px;
+}
+
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 12px;
+    margin: 0;
+    
+}
+
+footer h3{
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-weight: 1000;
+    color: rgb(255, 0, 234);
+    font-size: 20px;
+}
+
+i{
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu-lanche {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .texto {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        /*usar o display:inline tambem funciona*/
+        width: 100%;
+        
+    }
+
+    .container-footer{
+        display: inline-block;
+        
+    }
+
+    footer{
+        text-align: center;
+        margin: 10px;
+    }
+
+    footer p{
+        text-align: center 
+    }
+
+    .coluna{
+        margin-bottom: 30px;
+       
+    }
+
+}
